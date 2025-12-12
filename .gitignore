@@ -2,7 +2,6 @@
 .devenv*
 devenv.local.nix
 devenv.local.yaml
-.devcontainer.json
 
 # direnv
 .direnv
