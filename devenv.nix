@@ -7,13 +7,20 @@
 }:
 
 {
-  devcontainer.enable = true;
+  devcontainer = {
+    enable = true;
+    settings = {
+      workspaceMount = "source=volume-name,target=/workspace,type=volume";
+    };
+  };
 
   # https://devenv.sh/basics/
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = with pkgs; [
+    git
+  ];
 
   # https://devenv.sh/languages/
   languages.javascript.enable = true;
@@ -25,7 +32,7 @@
   services.postgres = {
     enable = true;
     initialScript = ''
-      CREATE ROLE vscode;
+      CREATE ROLE vscode WITH LOGIN SUPERUSER;
     '';
   };
 
@@ -53,7 +60,10 @@
   '';
 
   # https://devenv.sh/git-hooks/
-  git-hooks.hooks.shellcheck.enable = true;
+  git-hooks.hooks = {
+    nixfmt.enable = true;
+    shellcheck.enable = true;
+  };
 
   # See full reference at https://devenv.sh/reference/options/
 }
