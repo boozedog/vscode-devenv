@@ -16,13 +16,13 @@
   packages = [ pkgs.git ];
 
   # https://devenv.sh/languages/
-  # languages.rust.enable = true;
+  languages.javascript.enable = true;
 
   # https://devenv.sh/processes/
-  # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
+  processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
 
   # https://devenv.sh/services/
-  # services.postgres.enable = true;
+  services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
   scripts.hello.exec = ''
@@ -48,7 +48,7 @@
   '';
 
   # https://devenv.sh/git-hooks/
-  # git-hooks.hooks.shellcheck.enable = true;
+  git-hooks.hooks.shellcheck.enable = true;
 
   # See full reference at https://devenv.sh/reference/options/
 }
