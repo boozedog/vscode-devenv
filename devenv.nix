@@ -29,6 +29,7 @@
   # https://devenv.sh/packages/
   packages = with pkgs; [
     git
+    vim
   ];
 
   # https://devenv.sh/languages/
