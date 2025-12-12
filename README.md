@@ -8,7 +8,7 @@
   - open command center and run `remote-containers.openRepositoryInUniqueVolume`
   - choose github
   - select `boozedog/vscode-devenv`
-- ... profit!
+- ... profit!!
 
 ## building
 
