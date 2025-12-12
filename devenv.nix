@@ -22,7 +22,12 @@
   processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
 
   # https://devenv.sh/services/
-  services.postgres.enable = true;
+  services.postgres = {
+    enable = true;
+    initialScript = ''
+      CREATE ROLE vscode;
+    '';
+  };
 
   # https://devenv.sh/scripts/
   scripts.hello.exec = ''
