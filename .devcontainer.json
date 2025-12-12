@@ -2,7 +2,12 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "mkhl.direnv"
+        "Anthropic.claude-code",
+        "mkhl.direnv",
+        "EditorConfig.EditorConfig",
+        "usernamehw.errorlens",
+        "DavidAnson.vscode-markdownlint",
+        "Gruntfuggly.triggertaskonsave"
       ]
     }
   },

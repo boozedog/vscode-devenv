@@ -9,10 +9,18 @@
 {
   devcontainer = {
     enable = true;
-    # would need a postCreateCommand to clone the repo to use this
-    # settings = {
-    #   workspaceMount = "source=volume-name,target=/workspace/vscode-devenv,type=volume";
-    # };
+    settings = {
+      customizations.vscode.extensions = [
+        "Anthropic.claude-code"
+        "mkhl.direnv"
+        "EditorConfig.EditorConfig"
+        "usernamehw.errorlens"
+        "DavidAnson.vscode-markdownlint"
+        "Gruntfuggly.triggertaskonsave"
+      ];
+      # would need a postCreateCommand to clone the repo to use this
+      # workspaceMount = "source=volume-name,target=/workspace/vscode-devenv,type=volume";
+    };
   };
 
   # https://devenv.sh/basics/
