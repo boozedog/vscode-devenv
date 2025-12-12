@@ -9,9 +9,10 @@
 {
   devcontainer = {
     enable = true;
-    settings = {
-      workspaceMount = "source=volume-name,target=/workspace,type=volume";
-    };
+    # would need a postCreateCommand to clone the repo to use this
+    # settings = {
+    #   workspaceMount = "source=volume-name,target=/workspace/vscode-devenv,type=volume";
+    # };
   };
 
   # https://devenv.sh/basics/
